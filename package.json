@@ -1,0 +1,14 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "start-dev": "node acript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "FerGo",
+  "license": "ISC",
+  "description": "Proyecto final de Back-end con Node JS"
+}
