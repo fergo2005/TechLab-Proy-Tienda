@@ -1,14 +1,23 @@
 {
-  "name": "proyectofinal",
+  "name": "techlab-proy-tienda",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node script.js",
-    "start-dev": "node acript.js",
+    "start": "node index.js",
+    "start-dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fergo2005/TechLab-Proy-Tienda.git"
+  },
   "keywords": [],
-  "author": "FerGo",
+  "author": "Fergo",
   "license": "ISC",
-  "description": "Proyecto final de Back-end con Node JS"
+  "bugs": {
+    "url": "https://github.com/fergo2005/TechLab-Proy-Tienda/issues"
+  },
+  "homepage": "https://github.com/fergo2005/TechLab-Proy-Tienda#readme",
+  "description": ""
 }
