@@ -1,3 +1,59 @@
+// Copia de otros solo para ver con tipo Commonjs antigui
+/* const fs=require("fs");
+const os = require("os");
+const math = require("./modulos/math");
+const {suma, resta, multi, divi} = require("./modulos/math"); */
+
+//desde el archivo donde estan los modulos se exporta asi
+/* module.exports = {suma: suma, resta: resta, multi: multi, divi: divi };  */
+
+
+console.log(math);
+console.log(suma(2,4));
+console.log(resta(2,4));
+console.log(multi(2,4));
+console.log(divi(2,4));
+
+
+
+//modulos modernos 
+import fs from 'fs'
+import {suma, resta, multi, divi} from "./modulos/math.js"; //siempre con la extension
+//Tambien cambiar la forma en que se exporta...
+//en la carpeta modulos archivo math.js se le agrega export a cada funcion a exportar
+//ejemplo:
+//export const suma = (a, b)=> a + b; // etc etc
+// o sin el export en cada funcion agrego un export por default como:
+//export default {suma, resta, multi, divi};
+// o
+// terniendo un--- const math = {suma, resta, multi, divi};
+// export default math;
+
+
+
+
+/* console.log(os.platform());
+console.log(os.arch());
+console.log(os.release());
+console.log(os.networkInterfaces()); */
+
+
+/* fs.writeFile("./archivo.txt","hola en archivo txt creado", (err)=>{
+    if (err) {
+        console.log(err);        
+    }
+    console.log("Archivo creado");
+    
+}); */
+
+
+
+console.log
+console.log(" --------- ---------- ----------- ----------- ----------");
+
+
+
+
 
 console.log("Activo Script.js");
 
@@ -59,6 +115,7 @@ const data="la data aportada"; */
 
 
 import express from "express";
+import { arch, platform } from "os";
 import path from "path";
 import url from "url";
 
