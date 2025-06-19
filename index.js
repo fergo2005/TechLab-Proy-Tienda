@@ -1,9 +1,12 @@
+
 console.log("Index.js está activo");
 
+/* import { axios } from "axios"; */
 
 const argumentos=process.argv.slice(2);
 
 const [comando, ...args] =argumentos;
+
 
 switch (comando) {
     case "GET": 
