@@ -85,7 +85,7 @@ const fetchData = async (peticion, tipo, arg3, arg4, arg5) => {
                         console.log(data)
                     });
 
-                console.log("Entra por POST");                
+                console.log("Entra por POST");
                 console.log('Agregamos el producto indicado:');
                 //console.log(`a`);
                 //title:', titlePost, 'price:', pricePost, 'category:', categoryPost);
@@ -93,20 +93,34 @@ const fetchData = async (peticion, tipo, arg3, arg4, arg5) => {
                 break;
 
             case "PUT":
-                const itemPut = arg3 - 1;
-                const pricePut = arg4;
+                //const itemPut = arg3 - 1;
+                //const pricePut = arg4;
                 console.log("Entra por PUT");
-                console.log(`Modificamos el item con id:${arg3}, nuevo precio: ${pricePut}, satisfactoriamente.`);
+                console.log("Falta el codigo");
                 break;
-            case "DELETE":
-                const itemDelete = arg3 - 1;
-                console.log("Entra por DELETE");
 
-                console.log(`El item con id:${arg3} se eliminó con éxito.`);
+            case "DELETE":
+                const idDelete = arg3;
+
+                config = {
+                    method: "DELETE",  //por defecto es GET pero ahora le pongo POST                    
+                };
+
+                const deleteResponse = await fetch(`${url}/${idDelete}`, config);
+                const deleteData = await deleteResponse.json();
+                
+                if(deleteData[idDelete]){
+                    console.log(deleteData[idDelete]);
+                }else{
+                    console.log("Agregue ID del producto a Eliminar");                    
+                }
+                //console.log("Entra por DELETE");                
                 break;
+
             default: console.log("Agregue una peticion: GET o POST");
                 break;
-        }
+        };
+
         //se modifica hasta aqui 2025-06-21
 
         /* if (peticion == "GET") {
@@ -136,6 +150,8 @@ const fetchData = async (peticion, tipo, arg3, arg4, arg5) => {
         } else {
             //console.log("Agregue una peticion: GET o POST");
         }; */
+
+
     } catch (error) {
         console.error(error);
     } finally {
