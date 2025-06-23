@@ -114,7 +114,8 @@ const fetchData = async (peticion, tipo, arg3, arg4, arg5) => {
                 }else{
                     console.log("Agregue ID del producto a Eliminar");                    
                 }
-                //console.log("Entra por DELETE");                
+                //console.log("Entra por DELETE");
+                
                 break;
 
             default: console.log("Agregue una peticion: GET o POST");
