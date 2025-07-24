@@ -1,16 +1,16 @@
 import express from "express";
 import { join, __dirname } from "./utils/index.js";
-//import userRoutes from "./routes/user.route.js";
 import productRoutes from "./routes/product.route.js";
 import authRoutes from "./routes/auth.route.js";
-import { authentication } from "./middlewares/auth.middleware.js";
 
+import { envs } from "./config/envs.js";
+import { authentication } from "./middlewares/auth.middleware.js";
 //import {db} from './config/db.js' //despues lo voy a sacar
 
 //settings
 const app = express();
-app.set("PORT", 5000);       //envs.port
-//console.log(process.env.PORT);
+app.set("PORT", envs.port);       //envs.port ====== 5000
+console.log(process.env.PORT);
 
 // middlewares
 app.use(express.json());

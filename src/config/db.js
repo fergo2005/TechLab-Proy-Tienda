@@ -3,8 +3,8 @@
 
 import { getFirestore } from 'firebase/firestore';
 import { initializeApp } from "firebase/app";
-import { envs } from "./envs.js"
-//console.log(envs);
+import { envs } from "./envs.js";
+console.log(envs);
 
 const {
   apiKey,
@@ -22,7 +22,7 @@ const firebaseConfig = {
   projectId,
   storageBucket,
   messagingSenderId,
-  appId,
+  appId,  
 };
 
 // Initialize Firebase

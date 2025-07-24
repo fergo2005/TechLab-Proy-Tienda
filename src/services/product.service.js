@@ -1,4 +1,4 @@
-// productos
+//  services
 //import ... from '../models/user.model.js'
 import { getAllProducts, saveProduct } from "../models/product.model.js";
 

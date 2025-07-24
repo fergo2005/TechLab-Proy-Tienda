@@ -1,7 +1,6 @@
 // controller product
 import productService from "../services/product.service.js";
 //import { productService } from "../services/product.service.js";
-
 const getProducts = async (req, res) => {
     try {
         const products = await productService.getAll();
@@ -18,13 +17,18 @@ const getProducts = async (req, res) => {
 const createProduct = async (req, res) => {
     try {
         const {nombre, precio, disponible} = req.body;        
+        console.log(req.body);
+        
         //validar campos
         const newProduct = {
+            id : new Date().getTime(),
             nombre,
             precio: +precio,
             disponible: disponible || false, //inicializacion condicional
-        };        
+        };
+
         await productService.createProduct(newProduct);
+        
         res
         .status(200) 
         .json({message: "Lista de productos", payload: newProduct});

@@ -113,4 +113,133 @@ Este proyecto está licenciado bajo la licencia **MIT**. Consulta el archivo [LI
 
 Lamentablemente en la implementacion del firebase, se me rompió y no pude encontrar el error
 
-npm jsonwebtoken
+## Desde aqui voy yo
+
+## Para inicializar el proyecto e instalar las dependencias 
+npm i jsonwebtoken
+
+
+
+## Deployd??
+
+https://www.jwt.io/       // Para decodificar el token facilmente
+
+
+Gabriel Gabrielli
+12:15 p.m.
+https://github.com/gaby28894178/25024-Bakend-NodeJS-profe-pachu.git
+
+
+https://github.com/gaby28894178/template-express-layers-pachu.git
+
+https://github.com/DanielRiverol/clase_14/tree/main
+
+
+
+
+## pendientes:
+
+## index.js
+import { envs } from "./config/envs.js";  falta agregar el archivo en config
+app.set("PORT", 5000); -antes
+app.set("PORT", envs.port); -se cambio 5000 por envs.port ??  -port === PORT ???
+-ok
+## config
+  - # db.js
+
+  apiKey:process.env.APIKEY,
+  authDomain:process.env.AUTHDOMAIN,
+  projectId:process.env.PROJECTID,
+  storageBucket:process.env.STORAGEBUCKET,
+  messagingSenderId:process.env.MESSAGINGSENDERID,
+  appId:process.env.APPID,
+
+  eliminado de db
+  -ok
+
+  - # envs.js
+  perfect
+  -ok
+
+## controllers
+ - # product.controller.js
+ import productService from "../services/product.service.js";
+ perfect
+ export default { getProducts, createProduct };   
+ -ok
+
+ - #  auth.controller.js
+ import { generateToken } from "../utils/jwt.js";
+ usuario hardcode
+ autenticando se identifica
+ export default {login};
+ -ok
+
+## middlewares
+ - # auth.middlewaares.js
+ import { verifyToken } from "../utils/jwt.js";
+ devuelve objeto si true
+ verificado token devuelve user
+ perfect
+ export const authentication = ...
+ -ok
+
+## models
+ - # product.model.js
+ import {db} from "../config/db.js";
+ import {
+    collection,
+    doc,
+    getDoc,
+    getDocs,
+    addDoc,
+    updateDoc,
+    deleteDoc
+ } from 'firebase/firestore';
+ 
+ export const getAllProducts =
+ export const saveProduct =
+ -ok
+
+# routes
+ - # product.route.js
+    import { Router } from "express";
+    import productController from '../controllers/product.controller.js';
+    import { authentication } from "../middlewares/auth.middleware.js";   
+    router.get
+    router.post
+    perfect
+    export default router;
+    -ok
+
+ - # auth.route.js
+    import { Router } from "express";
+    import authorizationController from '../controllers/auth.controller.js';
+    export default router;
+    -ok
+
+# services
+ - # product.service.js
+    import { getAllProducts, saveProduct } from "../models/product.model.js";
+    aqui podria analizar si hay productos o no ejemplo
+    export default { getAll, createProduct };
+    -ok
+
+# utils
+ - # index.js
+    import { dirname, join } from "path";
+    import { fileURLToPath } from "url";
+    perfect
+    export { __dirname, join };
+    -ok
+
+ - # jwt.js
+    import jwt from 'jsonwebtoken';
+    import { envs } from "../config/envs.js";        
+    export const generateToken = (userData)
+    export const verifyToken = (token)
+    -ok
+
+
+
+

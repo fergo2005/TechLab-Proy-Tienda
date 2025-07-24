@@ -26,8 +26,7 @@ export const getAllProducts = async () => {
         const products = [];
         productList.forEach(doc=>products.push({id:doc.id, ...doc.data()}));
 
-        return products
-
+        return products;
     } catch (error) {
         throw new Error("Error", error.message)
     }

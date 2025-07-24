@@ -9,7 +9,7 @@ export const authentication = (req,res,next)=>{
        
     if(!verificationResult.valid) return res.sendStatus(403);
 
-    req.user= verificationResult.decoded; //req.user={id:userData.id, email:userData.email } //verificado token devuelve user
+    req.user = verificationResult.decoded;   //req.user={id:userData.id, email:userData.email } //verificado token devuelve user
     //al objeto request de express  
     next();
 
