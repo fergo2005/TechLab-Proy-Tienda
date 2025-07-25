@@ -118,6 +118,14 @@ Lamentablemente en la implementacion del firebase, se me rompió y no pude encon
 ## Para inicializar el proyecto e instalar las dependencias 
 npm i jsonwebtoken
 
+## Dependencias instaladas
+   -express
+   -firebase
+   -dotenv (npm i dotenv)
+      para trabajar con variables de entorno.
+   -jsonwebtoken
+   
+
 
 
 ## Deployd??
