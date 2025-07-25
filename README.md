@@ -248,6 +248,6 @@ app.set("PORT", envs.port); -se cambio 5000 por envs.port ??  -port === PORT ???
     export const verifyToken = (token)
     -ok
 
-
+modificado 2025-07-25
 
 
